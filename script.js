@@ -11,15 +11,15 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         
         alert('Equality');
-        return roundResult = 0
+        return roundResult = false
     } else if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'paper' && computerSelection == 'rock' || playerSelection == 'scissors' && computerSelection == 'paper') {
         
         alert(`You won! ${playerSelection} beats ${computerSelection}`)
-        return roundResult = 1
+        return roundResult = true
     } else  {
         
         alert(`You loose! ${computerSelection} beats ${playerSelection}`)
-        return roundResult = 0
+        return roundResult = false
     }
     /*return roundResult*/
 }
@@ -29,18 +29,18 @@ function game() {
         let fiveprompt = prompt("What will you be playing?")
         let computerSelection2 = getComputerChoice();
         playRound(fiveprompt, computerSelection2)
+        if (roundResult) {
+            score++;
+        }
         getComputerChoice()
         console.log(computerSelection2)
+        console.log(score)
 
-        
     }
-    /*if (roundResult == true) {
-        alert('you won all the round')
-    }
-    else {
-        alert('you loose all')
-    }*/
+    
 } 
+
+var score = 0
 
 
 const computerSelection = getComputerChoice();
