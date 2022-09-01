@@ -9,17 +9,19 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection == computerSelection) {
-        
         alert('Draw.');
         return roundResult = 'draw'
     } else if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'paper' && computerSelection == 'rock' || playerSelection == 'scissors' && computerSelection == 'paper') {
-        
         alert(`You won! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)} beats ${computerSelection}.`)
         return roundResult = 'win'
-    } else  {
-        
+
+    } else  if (playerSelection == 'scissors' && computerSelection == 'rock' || playerSelection == 'rock' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'scissors'){
         alert(`You lost! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${playerSelection}.`)
         return roundResult = 'lose'
+
+    } else {
+        alert('No correct input')
+        return roundResult = 'noinput'
     }
     /*return roundResult*/
 }
