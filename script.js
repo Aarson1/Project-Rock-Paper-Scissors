@@ -23,7 +23,6 @@ function playRound(playerSelection, computerSelection) {
         alert('No correct input')
         return roundResult = 'noinput'
     }
-    /*return roundResult*/
 }
 
 function game() {
