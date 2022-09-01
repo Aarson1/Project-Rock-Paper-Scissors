@@ -1,0 +1,1 @@
+In this project I will mainly use functions and conditionals to create a simple Rock Paper Scissors game.
