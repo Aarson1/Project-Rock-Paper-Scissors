@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        let fiveprompt = prompt("What will you be playing?")
+        let fiveprompt = prompt("What will you be playing?").toLowerCase();
         let computerSelection2 = getComputerChoice();
         playRound(fiveprompt, computerSelection2)
         if (roundResult === 'win') {
