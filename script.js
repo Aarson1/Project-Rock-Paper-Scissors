@@ -38,7 +38,7 @@ function game() {
         }
 
         getComputerChoice()
-        console.log(computerSelectionLoop)
+        console.log('computer selection :', computerSelectionLoop)
         console.log(playerScore, " for player")
         console.log(computerScore, " for computer")
 
@@ -46,9 +46,9 @@ function game() {
     if (playerScore == computerScore) {
         alert('It\'s a draw, no one won.')
     } else if (playerScore > computerScore) {
-        alert('Congratulations! Yon won all round.')
+        alert('Congratulations! Yon won all round. Your score : ' + playerScore)
     } else {
-        alert('Unfortunately, you lost all round.')
+        alert('Unfortunately, you lost all round. Your score : ' + playerScore)
     }
 } 
 
